@@ -6,9 +6,10 @@
         npm i -D gulp browser-sync --save-dev;
         gulp
  **/
+var serverName = 'myservername.dev'; // you NEED to have a vhost of this name setup
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
-var serverName = 'testinglive.dev';
+
 
 // Static server.
 gulp.task('browser-sync', function () {

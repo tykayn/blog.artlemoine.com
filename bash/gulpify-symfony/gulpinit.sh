@@ -7,13 +7,15 @@ BLEU="\\033[1;34m"
 CYAN="\\033[1;36m"
 touch Gulpfile.js;
 echo "Gulpifions votre application symfony2! Ce script doit être lancé depuis la racine du projet symfony";
-echo "copie des fichiers gulp";
-cp init/Gulpfile.js* .;
+
 SERVERNAME="symfony.dev";
 NEWSERVERNAME=$SERVERNAME;
-#echo -n "vous devez créer un virtualhost, choisissez son nom ( $SERVERNAME ): ";
 echo -e "$BLEU vous devez créer un virtualhost, choisissez son nom. \n faites entrée si ok, ou bien écrivez un autre nom $NORMAL";
 read  -p  " ( $SERVERNAME ): " NEWSERVERNAME ;
+echo -e "$BLEU copie des fichiers gulp configuré pour ce nom de serveur $NORMAL";
+cp init/Gulpfile.js .
+sed -i 's/myservername.dev/'$NEWSERVERNAME'/g' Gulpfile.js
+
 NEWSERVERNAME=${NEWSERVERNAME:=$SERVERNAME}
 echo  -e "$BLEU nouveau serveur: $CYAN $NEWSERVERNAME $BLEU" ;
 
