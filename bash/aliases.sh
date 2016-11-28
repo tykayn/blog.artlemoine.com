@@ -1,11 +1,11 @@
-# these bash aliases are meant to be added in your user folder, in a file named: .bash_aliases (with the dot at the beginning)
-# done for my blog http://blog.artlemoine.com
+# these bash aliases are meant to be added in your user folder,
+# in a file named: .bash_aliases (with the dot at the beginning)
+# done for my blog http://www.cipherbliss.com
 
 ########## lieux ###########
 	alias goserv='ssh monUtilisateur@monServeur.com/var/www/html'; # customise this one!
 ###### lieux locaux
 	alias gowork='cd /var/www/html/MON-PROJET-EN-COURS'; # customise this one!
-
 
 ################ symfony2 ######################
 	alias sf='php app/console';
@@ -46,5 +46,7 @@
 	alias glg='git log --pretty=oneline';
 	alias myglg='git log --pretty=oneline --author=tykayn'; # log pour seulement mes commits, utile pour un stand up de  projet Agile
 	alias gaci='git add . --all && git reset -- *.spec.js && git commit -m '; # ajouter sans les tests js, donnez le message du commit entre guillemets suite à cette commande
-    alias gaaci='git add . --all && git commit -m '; # ajouter sans les tests js
+    	alias gaaci='git add . --all && git commit -m '; # ajouter sans les tests js
 
+################ other helpers
+	alias hgrep="history |grep"
