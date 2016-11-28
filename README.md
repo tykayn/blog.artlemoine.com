@@ -1,2 +1,2 @@
-# blog.artlemoine.com
-open code ressources for the blog.artlemoine.com website
+# www.cipherbliss.com
+open code ressources for my blog www.cipherbliss.com
